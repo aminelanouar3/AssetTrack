@@ -1,4 +1,4 @@
-
+const authRoutes = require("./modules/auth/auth.routes");
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
@@ -7,9 +7,7 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-const assetRoutes = require("./routes/assetRoutes");
-app.use("/api/assets", assetRoutes);
-
+app.use("/api/auth", authRoutes);
 const PORT = process.env.PORT || 3000;
 
 // Connexion à MongoDB
