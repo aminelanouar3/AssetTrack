@@ -1,0 +1,547 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f6fb;
+  color: #202b3c;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(135deg, #102b50, #245b91);
+}
+
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 430px;
+  padding: 42px;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px #071b3440;
+}
+
+.brand {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.brand-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 12px;
+  background: #2563eb;
+  color: white;
+  border-radius: 14px;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.brand h1 {
+  font-size: 25px;
+  color: #172c4c;
+}
+
+.brand p, .subtitle {
+  color: #8290a5;
+  font-size: 13px;
+  margin-top: 7px;
+}
+
+.login-card h2 {
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+form label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 19px 0 8px;
+  color: #34445c;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #dce2eb;
+  border-radius: 8px;
+  outline: none;
+  background: white;
+  color: #26364b;
+}
+
+form input:focus, form select:focus {
+  border-color: #3977e8;
+  box-shadow: 0 0 0 3px #3977e81a;
+}
+
+.primary-btn {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 12px 17px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.login-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #9aa5b5;
+  margin-top: 30px;
+}
+
+.error-message {
+  background: #fff0f0;
+  color: #c03939;
+  padding: 11px;
+  margin-top: 15px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+
+/* Users page */
+
+.users-page {
+  min-height: 100vh;
+}
+
+.topbar {
+  background: white;
+  min-height: 82px;
+  padding: 17px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9edf3;
+}
+
+.topbar h2 {
+  font-size: 20px;
+  color: #172c4c;
+}
+
+.topbar p {
+  font-size: 12px;
+  color: #8b98aa;
+  margin-top: 5px;
+}
+
+.logout-btn {
+  background: #fff;
+  border: 1px solid #dce2eb;
+  color: #526177;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #f4f6fb;
+}
+
+.content {
+  max-width: 1400px;
+  margin: auto;
+  padding: 35px 5%;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  font-size: 25px;
+  color: #172c4c;
+}
+
+.page-heading p {
+  font-size: 13px;
+  color: #8b98aa;
+  margin-top: 6px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border: 1px solid #edf0f5;
+  border-radius: 12px;
+}
+
+.stat-card span {
+  display: block;
+  color: #8390a3;
+  font-size: 13px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 27px;
+  margin-top: 10px;
+  color: #1d3e70;
+}
+
+.table-card {
+  background: white;
+  border: 1px solid #edf0f5;
+  border-radius: 12px;
+  padding: 23px;
+}
+
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.table-toolbar h3 {
+  font-size: 17px;
+}
+
+.search-input {
+  width: 300px;
+  max-width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #dce2eb;
+  border-radius: 8px;
+  outline: none;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 750px;
+  text-align: left;
+}
+
+th {
+  background: #f7f9fc;
+  color: #78869a;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 14px 12px;
+}
+
+td {
+  border-bottom: 1px solid #edf0f5;
+  padding: 16px 12px;
+  font-size: 13px;
+}
+
+.role-badge, .status-badge {
+  display: inline-block;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.role-badge {
+  background: #edf3ff;
+  color: #3266b7;
+}
+
+.status-badge.active {
+  background: #e8f8ef;
+  color: #16834a;
+}
+
+.status-badge.inactive {
+  background: #fff0ed;
+  color: #c34c3b;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.action-btn {
+  padding: 7px 9px;
+  border: none;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.edit {
+  background: #edf3ff;
+  color: #3266b7;
+}
+
+.reset {
+  background: #fff5e5;
+  color: #a66a0b;
+}
+
+.deactivate {
+  background: #fff0ed;
+  color: #c34c3b;
+}
+
+.activate {
+  background: #e8f8ef;
+  color: #16834a;
+}
+
+.empty-state, .loading {
+  text-align: center;
+  color: #8995a7;
+  padding: 30px;
+}
+
+/* Modal */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: #14243c80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-card {
+  background: white;
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  border-radius: 14px;
+  position: relative;
+  box-shadow: 0 20px 60px #0002;
+}
+
+.modal-card h2 {
+  font-size: 20px;
+  color: #172c4c;
+  margin-bottom: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  border: none;
+  background: transparent;
+  font-size: 27px;
+  color: #8b98aa;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 22px;
+}
+
+@media (max-width: 700px) {
+  .content {
+    padding: 25px 4%;
+  }
+
+  .page-heading, .table-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .login-card {
+    padding: 28px;
+  }
+
+  .topbar {
+    padding: 15px 4%;
+  }
+  
+}
+
+/* Toast notifications */
+
+.toast {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 100;
+  min-width: 300px;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px #172c4c20;
+  border-left: 4px solid #16a36a;
+  color: #34445c;
+  font-size: 13px;
+  animation: slideIn 0.25s ease;
+}
+
+.toast-error {
+  border-left-color: #dc4c4c;
+}
+
+.toast-icon {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  background: #e8f8ef;
+  color: #16834a;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.toast-error .toast-icon {
+  background: #fff0f0;
+  color: #c03939;
+}
+
+.toast button {
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  color: #8b98aa;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Custom confirmation modal */
+
+.confirm-card {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 60px #0002;
+}
+
+.confirm-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  font-size: 25px;
+  font-weight: 700;
+  background: #edf3ff;
+  color: #3266b7;
+}
+
+.confirm-icon.danger {
+  background: #fff0ed;
+  color: #c34c3b;
+}
+
+.confirm-card h2 {
+  font-size: 20px;
+  color: #172c4c;
+  margin-bottom: 10px;
+}
+
+.confirm-card p {
+  color: #8290a5;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.cancel-btn, .confirm-btn {
+  padding: 11px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.cancel-btn {
+  background: #f0f2f6;
+  color: #526177;
+}
+
+.confirm-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.confirm-btn.danger-btn {
+  background: #dc4c4c;
+}
+

@@ -87,10 +87,30 @@ const setUserStatus = async (matricule, actif) => {
     return await utilisateur.save();
 };
 
+// Réinitialiser le mot de passe d'un utilisateur
+const resetUserPassword = async (matricule, nouveauMotDePasse) => {
+    if (!nouveauMotDePasse || nouveauMotDePasse.length < 8) {
+        throw new Error("Le mot de passe doit contenir au moins 8 caractères.");
+    }
+
+    const utilisateur = await Utilisateur.findById(matricule);
+
+    if (!utilisateur) {
+        throw new Error("Utilisateur introuvable.");
+    }
+
+    utilisateur.motDePasse = await bcrypt.hash(nouveauMotDePasse, 10);
+
+    await utilisateur.save();
+
+    return true;
+};
+
 module.exports = {
     createUser,
     getAllUsers,
     getUserById,
     updateUser,
-    setUserStatus
+    setUserStatus,
+    resetUserPassword
 };

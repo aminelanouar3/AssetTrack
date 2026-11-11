@@ -92,6 +92,24 @@ const deactivateUser = async (req, res) => {
         res.status(404).json({ message: error.message });
     }
 };
+// Réinitialiser le mot de passe
+const resetUserPassword = async (req, res) => {
+    try {
+        await usersService.resetUserPassword(
+            req.params.matricule,
+            req.body.nouveauMotDePasse
+        );
+
+        res.status(200).json({
+            message: "Mot de passe réinitialisé avec succès."
+        });
+
+    } catch (error) {
+        res.status(400).json({
+            message: error.message
+        });
+    }
+};
 
 module.exports = {
     createUser,
@@ -99,5 +117,6 @@ module.exports = {
     getUserById,
     updateUser,
     activateUser,
-    deactivateUser
+    deactivateUser,
+    resetUserPassword
 };

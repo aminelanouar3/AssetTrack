@@ -26,5 +26,9 @@ router.patch("/:matricule/activate", usersController.activateUser);
 
 // Désactiver un compte
 router.patch("/:matricule/deactivate", usersController.deactivateUser);
-
+//modifier le mot de passe
+router.patch(
+    "/:matricule/reset-password",
+    usersController.resetUserPassword
+);
 module.exports = router;
